@@ -15,11 +15,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Structu
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.ExampleBase", "examples\CommandLineInjector.ExampleBase\CommandLineInjector.ExampleBase.csproj", "{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Lamar", "src\CommandLineInjector.Lamar\CommandLineInjector.Lamar.csproj", "{ED81A2B9-610F-409A-935B-EBD0FCF60954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Lamar", "src\CommandLineInjector.Lamar\CommandLineInjector.Lamar.csproj", "{ED81A2B9-610F-409A-935B-EBD0FCF60954}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Lamar.Tests", "src\CommandLineInjector.Lamar.Tests\CommandLineInjector.Lamar.Tests.csproj", "{52194C48-5010-40D5-966F-F551F854837E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Lamar.Tests", "src\CommandLineInjector.Lamar.Tests\CommandLineInjector.Lamar.Tests.csproj", "{52194C48-5010-40D5-966F-F551F854837E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Lamar.Example", "examples\CommandLineInjector.Lamar.Example\CommandLineInjector.Lamar.Example.csproj", "{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Lamar.Example", "examples\CommandLineInjector.Lamar.Example\CommandLineInjector.Lamar.Example.csproj", "{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Autofac", "src\CommandLineInjector.Autofac\CommandLineInjector.Autofac.csproj", "{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Autofac.Tests", "src\CommandLineInjector.Autofac.Tests\CommandLineInjector.Autofac.Tests.csproj", "{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Autofac.Example", "examples\CommandLineInjector.Autofac.Example\CommandLineInjector.Autofac.Example.csproj", "{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +69,18 @@ Global
 		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
