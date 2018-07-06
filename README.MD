@@ -27,7 +27,7 @@ namespace MyConsoleApp
 }
 ```
 
-## What Why And How?
+## What The  Why And How?
 
 
 Let's say you've architected your code to use dependency injection and you have your functionality isolated in nice, descriptive and highly testable classes like this
