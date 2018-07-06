@@ -1,25 +1,22 @@
 ﻿using System;
-using Autofac;
-using Autofac.Core;
 using CommandLineInjector.Application;
 using CommandLineInjector.ExampleBase.Commands;
 using CommandLineInjector.ExampleBase.Dependencies;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace CommandLineInjector.Autofac.Example
+namespace CommandInjector.Microsoft.DependencyInjection.Example
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var builder = new ContainerBuilder();
-            builder.RegisterType<ExampleService>().As<IExampleService>();
-            builder.RegisterType<TestSimpleCommandClass>().AsSelf();
+            var serviceCollection = new ServiceCollection()
+                .AddTransient<IExampleService, ExampleService>()
+                .AddTransient<TestSimpleCommandClass>();
 
-            var autofacContainer = builder.Build();
-
-            var containerAdapter = new AutofacContainerAdapter(autofacContainer, (scopeBuilder, commands) =>
+            var containerAdapter = new MicrosoftDependencyInjectionAdapter(serviceCollection, (scopeBuilder, commands) =>
             {
-                scopeBuilder.RegisterInstance(new ExampleConfiguration(commands)).As<IExampleConfiguration>();
+                scopeBuilder.AddSingleton<IExampleConfiguration>(new ExampleConfiguration(commands));
                 return scopeBuilder;
             });
 
@@ -30,6 +27,8 @@ namespace CommandLineInjector.Autofac.Example
 
             app.Command<TestSimpleCommandClass>("simple");
             app.Execute(args);
+
+            Console.ReadLine();
         }
     }
 }

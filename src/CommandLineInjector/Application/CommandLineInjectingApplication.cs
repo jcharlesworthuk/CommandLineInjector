@@ -1,17 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 using System.Threading.Tasks;
-using CommandLineInjector.Exceptions;
 using CommandLineInjector.Extensions;
 using CommandLineInjector.Ioc;
 using CommandLineInjector.Options;
 using Microsoft.Extensions.CommandLineUtils;
 
-namespace CommandLineInjector.Console
+namespace CommandLineInjector.Application
 {
     public class CommandLineInjectingApplication : CommandLineApplication
     {
@@ -24,7 +21,7 @@ namespace CommandLineInjector.Console
             HelpOption("-?|-h|--help");
         }
 
-        public void RequiresCommand()
+        public CommandLineInjectingApplication RequiresCommand()
         {
             OnExecute(() =>
             {
@@ -32,16 +29,20 @@ namespace CommandLineInjector.Console
                 System.Console.WriteLine("Specify --help for a list of available options and commands.");
                 return 0;
             });
+
+            return this;
         }
 
         private readonly List<ContainerConfigurationOption> _universalCommandOptions = new List<ContainerConfigurationOption>();
 
-        public void AddToSubsequentAllCommands(ContainerConfigurationOption option)
+        public CommandLineInjectingApplication AddToSubsequentAllCommands(ContainerConfigurationOption option)
         {
             _universalCommandOptions.Add(option);
+
+            return this;
         }
 
-        public void Command<TCommandType>(string name)
+        public CommandLineInjectingApplication Command<TCommandType>(string name)
         {
             Command(name, config =>
             {
@@ -115,6 +116,8 @@ namespace CommandLineInjector.Console
                     return 0;
                 });
             });
+
+            return this;
         }
     }
 }

@@ -14,7 +14,7 @@ namespace CommandLineInjector.Extensions
         /// <returns>The string with spaces added</returns>
         public static string SplitOutPascalCase(this string str)
         {
-            return str.ToCharArray().SplitOutPascalCase().ToString();
+            return new string(str.ToCharArray().SplitOutPascalCase().ToArray());
         }
 
         /// <summary>
@@ -27,7 +27,7 @@ namespace CommandLineInjector.Extensions
             char prev = default(char);
             foreach (var c in chars.Where(x => x != ' '))
             {
-                if (char.IsUpper(c) && !char.IsUpper(prev))
+                if (prev != default(char) && char.IsUpper(c) && !char.IsUpper(prev))
                     yield return ' ';
 
                 prev = c;

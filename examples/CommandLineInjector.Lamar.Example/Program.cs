@@ -1,4 +1,4 @@
-﻿using CommandLineInjector.Console;
+﻿using CommandLineInjector.Application;
 using CommandLineInjector.ExampleBase.Commands;
 using CommandLineInjector.ExampleBase.Dependencies;
 using Lamar;
