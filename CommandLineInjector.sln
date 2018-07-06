@@ -7,13 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector", "src\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.StructureMap", "src\CommandLineInjector.StructureMap\CommandLineInjector.StructureMap.csproj", "{AE9D1436-53A6-4A4A-9825-3091D21738D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Tests", "src\CommandLineInjector.Tests\CommandLineInjector.Tests.csproj", "{44682B1C-F6AF-4641-B858-0680E294C200}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Tests", "src\CommandLineInjector.Tests\CommandLineInjector.Tests.csproj", "{44682B1C-F6AF-4641-B858-0680E294C200}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.StructureMap.Tests", "src\CommandLineInjector.StructureMap.Tests\CommandLineInjector.StructureMap.Tests.csproj", "{B007C60B-EF11-4B79-AE62-DC60E876E10C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.StructureMap.Tests", "src\CommandLineInjector.StructureMap.Tests\CommandLineInjector.StructureMap.Tests.csproj", "{B007C60B-EF11-4B79-AE62-DC60E876E10C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.StructureMap.Example", "examples\CommandLineInjector.StructureMap.Example\CommandLineInjector.StructureMap.Example.csproj", "{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.StructureMap.Example", "examples\CommandLineInjector.StructureMap.Example\CommandLineInjector.StructureMap.Example.csproj", "{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.ExampleBase", "examples\CommandLineInjector.ExampleBase\CommandLineInjector.ExampleBase.csproj", "{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.ExampleBase", "examples\CommandLineInjector.ExampleBase\CommandLineInjector.ExampleBase.csproj", "{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Lamar", "src\CommandLineInjector.Lamar\CommandLineInjector.Lamar.csproj", "{ED81A2B9-610F-409A-935B-EBD0FCF60954}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Lamar.Tests", "src\CommandLineInjector.Lamar.Tests\CommandLineInjector.Lamar.Tests.csproj", "{52194C48-5010-40D5-966F-F551F854837E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Lamar.Example", "examples\CommandLineInjector.Lamar.Example\CommandLineInjector.Lamar.Example.csproj", "{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +51,18 @@ Global
 		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED81A2B9-610F-409A-935B-EBD0FCF60954}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED81A2B9-610F-409A-935B-EBD0FCF60954}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED81A2B9-610F-409A-935B-EBD0FCF60954}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED81A2B9-610F-409A-935B-EBD0FCF60954}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52194C48-5010-40D5-966F-F551F854837E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52194C48-5010-40D5-966F-F551F854837E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52194C48-5010-40D5-966F-F551F854837E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52194C48-5010-40D5-966F-F551F854837E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -109,7 +109,8 @@ namespace CommandLineInjector.Console
                         var command = scopedContainer.GetInstance<TCommandType>();
 
                         var task = (Task)invokeMethod.Invoke(command, argumentValues.ToArray());
-                        await task.ConfigureAwait(false);
+                        
+                        await task.ConfigureAwait(true);
                     }
                     return 0;
                 });

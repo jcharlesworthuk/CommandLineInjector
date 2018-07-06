@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CommandLineInjector.Lamar.Example": {
+      "commandName": "Project",
+      "commandLineArgs": "simple hello --times 4 --configValue \"my config value\""
+    }
+  }
+}
