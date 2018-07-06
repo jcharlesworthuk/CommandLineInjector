@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.StructureMap.Tests", "src\CommandLineInjector.StructureMap.Tests\CommandLineInjector.StructureMap.Tests.csproj", "{B007C60B-EF11-4B79-AE62-DC60E876E10C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.StructureMap.Example", "examples\CommandLineInjector.StructureMap.Example\CommandLineInjector.StructureMap.Example.csproj", "{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.ExampleBase", "examples\CommandLineInjector.ExampleBase\CommandLineInjector.ExampleBase.csproj", "{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{B007C60B-EF11-4B79-AE62-DC60E876E10C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B007C60B-EF11-4B79-AE62-DC60E876E10C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B007C60B-EF11-4B79-AE62-DC60E876E10C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B4DCEB3-FD60-4AC7-92FC-5745C2C89FC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3860FA5-DEAE-4D6C-AF45-6449A8A0BBDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

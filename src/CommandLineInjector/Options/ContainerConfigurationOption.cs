@@ -5,7 +5,7 @@ using System.Text;
 namespace CommandLineInjector.Options
 {
     /// <summary>
-    /// Defines a command line option that is used to configure a child IOC container before resolving the command
+    /// Defines a command line option that is used to configure a child IOC container before resolving the services
     /// </summary>
     public class ContainerConfigurationOption
     {

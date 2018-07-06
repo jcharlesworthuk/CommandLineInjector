@@ -1,15 +1,22 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using CommandLineInjector.Ioc;
 using CommandLineInjector.Logging;
 using CommandLineInjector.Options;
+using StructureMap;
 
 namespace CommandLineInjector.StructureMap
 {
     public class StructureMapContainerAdapter : ICommandContainer
     {
         private readonly IContainer _structureMapContainer;
+        private readonly ContainerConfigurationDelegate<IContainer> _extraConfiguration;
+
+        public StructureMapContainerAdapter(IContainer structureMapContainer, ContainerConfigurationDelegate<IContainer> extraConfiguration)
+        {
+            _structureMapContainer = structureMapContainer;
+            _extraConfiguration = extraConfiguration;
+        }
 
         public StructureMapContainerAdapter(IContainer structureMapContainer)
         {
@@ -21,12 +28,7 @@ namespace CommandLineInjector.StructureMap
         public ICommandContainer GetScoped(IEnumerable<(ContainerConfigurationOption option, string value)> universalCommands)
         {
             var scoped = _structureMapContainer.GetNestedContainer();
-            var configManager = new CommandLineConfigManager(universalCommands, scoped.GetInstance<ILogger>());
-            scoped.Configure(cfg =>
-            {
-                cfg.For<IWymConfigurationManager>().Use(configManager).Singleton();
-                cfg.For<HttpClientSingletonWrapper>().Use(new HttpClientSingletonWrapper(configManager)).Singleton();
-            });
+            _extraConfiguration?.Invoke(scoped, universalCommands);
             return new StructureMapContainerAdapter(scoped);
         }
 
