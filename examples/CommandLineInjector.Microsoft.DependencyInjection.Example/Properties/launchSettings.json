@@ -1,6 +1,6 @@
 {
   "profiles": {
-    "CommandInjector.Microsoft.DependencyInjection.Example": {
+    "CommandLineInjector.Microsoft.DependencyInjection.Example": {
       "commandName": "Project",
       "commandLineArgs": " simple hello --times 4 --configValue \"my config value\""
     }

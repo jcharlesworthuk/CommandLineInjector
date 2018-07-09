@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CommandInjector.Microsoft.DependencyInjection\CommandLineInjector.Microsoft.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\src\CommandLineInjector.Microsoft.DependencyInjection\CommandLineInjector.Microsoft.DependencyInjection.csproj" />
     <ProjectReference Include="..\CommandLineInjector.ExampleBase\CommandLineInjector.ExampleBase.csproj" />
   </ItemGroup>
 

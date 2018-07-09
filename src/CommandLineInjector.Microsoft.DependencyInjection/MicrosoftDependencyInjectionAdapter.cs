@@ -5,7 +5,7 @@ using CommandLineInjector.Ioc;
 using CommandLineInjector.Options;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CommandInjector.Microsoft.DependencyInjection
+namespace CommandLineInjector.Microsoft.DependencyInjection
 {
     public class MicrosoftDependencyInjectionAdapter: ICommandContainer
     {

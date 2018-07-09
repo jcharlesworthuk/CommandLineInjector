@@ -7,7 +7,7 @@ using Moq;
 using Shouldly;
 using Xunit;
 
-namespace CommandInjector.Microsoft.DependencyInjection.Tests
+namespace CommandLineInjector.Microsoft.DependencyInjection.Tests
 {
     public class MicrosoftDependencyInjectionAdapterTests
     {

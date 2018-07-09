@@ -4,7 +4,7 @@ using CommandLineInjector.ExampleBase.Commands;
 using CommandLineInjector.ExampleBase.Dependencies;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace CommandInjector.Microsoft.DependencyInjection.Example
+namespace CommandLineInjector.Microsoft.DependencyInjection.Example
 {
     class Program
     {

@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Description>StructureMap adapter for CommandLineInjector</Description>
+    <Copyright>© 2018 J Charlesworth</Copyright>
+    <PackageLicenseUrl>https://github.com/jcharlesworthuk/CommandLineInjector/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/jcharlesworthuk/CommandLineInjector</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/jcharlesworthuk/CommandLineInjector</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>.NET Core, Console, Command Line, Parameters, Depedency Injection, StructureMap</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

@@ -7,9 +7,9 @@ Parameter binding + Dependency Injection for .NET Core console apps.
   * [Multiple Commands](#Multiple-Commands)
   * [Service Classes](#Service-Classes)
   * [Global Option Flags](#Global-Option-Flags)
-  
+
 * [DI Frameworks](#DI-Frameworks)
-  * [Microsoft.Extensions.DependencyInjection](#CommandInjector.Microsoft.DependencyInjection)
+  * [Microsoft.Extensions.DependencyInjection](#CommandLineInjector.Microsoft.DependencyInjection)
   * [Autofac](#CommandLineInjector.Autofac)
   * [StructureMap](#CommandLineInjector.StructureMap)
   * [Lamar](#CommandLineInjector.Lamar)
@@ -379,12 +379,12 @@ If we now run any command with the new "--provider" option set the code will dro
 
 The base _CommandLineInjector_ package contains the console app class (inherited from [Microsoft.Extensions.CommandLineUtils.CommandLineApplication](https://docs.microsoft.com/en-us/dotnet/api/microsoft.extensions.commandlineutils.commandlineapplication?view=aspnetcore-1.1)) and the interfaces required for dependency injection, but you have to also include the adapter for your DI Framework.  Adapters are available for the following Dependency Injection frameworks
 
-## CommandInjector.Microsoft.DependencyInjection
+## CommandLineInjector.Microsoft.DependencyInjection
 
 This adapter uses the [Microsoft.Extensions.DependencyInjection](https://github.com/aspnet/DependencyInjection) package which is commonly used in ASP.Net Core and EF Core scenarios.
 
 ```csharp
-namespace CommandInjector.Microsoft.DependencyInjection.Example
+namespace CommandLineInjector.Microsoft.DependencyInjection.Example
 {
     class Program
     {
