@@ -2,6 +2,18 @@
 
 Parameter binding + Dependency Injection for .NET Core console apps.
 
+`> dotnet myapp mycommand --option="Bind Me!" --awesomeness=100`
+
+```csharp
+public async Task MyCommand(string option, int awesomeness = 50) {
+  // ... Well that was easy
+}
+```
+
+# Documentation
+
+Table of Contents
+
 * [Documentation](#Documentation)
   * [Overview](#Overview)
   * [Multiple Commands](#Multiple-Commands)
@@ -13,8 +25,6 @@ Parameter binding + Dependency Injection for .NET Core console apps.
   * [Autofac](#CommandLineInjector.Autofac)
   * [StructureMap](#CommandLineInjector.StructureMap)
   * [Lamar](#CommandLineInjector.Lamar)
-
-# Documentation
 
 ## Overview
 
