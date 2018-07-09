@@ -2,6 +2,20 @@
 
 Parameter binding + Dependency Injection for .NET Core console apps.
 
+* [Documentation](#Documentation)
+  * [Overview](#Overview)
+  * [Multiple Commands](#Multiple-Commands)
+  * [Service Classes](#Service-Classes)
+  * [Global Option Flags](#Global-Option-Flags)
+  
+* [DI Frameworks](#DI-Frameworks)
+  * [Microsoft.Extensions.DependencyInjection](#CommandInjector.Microsoft.DependencyInjection)
+  * [Autofac](#CommandLineInjector.Autofac)
+  * [StructureMap](#CommandLineInjector.StructureMap)
+  * [Lamar](#CommandLineInjector.Lamar)
+
+# Documentation
+
 ## Overview
 
 Let's say you have some code in a class like this that calls an injected dependency...
