@@ -10,6 +10,8 @@ public async Task MyCommand(string option, int awesomeness = 50) {
 }
 ```
 
+Available on Nuget [CommandLineInjector](https://www.nuget.org/packages/CommandLineInjector/)
+
 # Documentation
 
 Table of Contents
@@ -391,7 +393,7 @@ The base _CommandLineInjector_ package contains the console app class (inherited
 
 ## CommandLineInjector.Microsoft.DependencyInjection
 
-This adapter uses the [Microsoft.Extensions.DependencyInjection](https://github.com/aspnet/DependencyInjection) package which is commonly used in ASP.Net Core and EF Core scenarios.
+This adapter uses the [Microsoft.Extensions.DependencyInjection](https://github.com/aspnet/DependencyInjection) package which is commonly used in ASP.Net Core and EF Core scenarios. Availble on nuget [CommandLineInjector.Microsoft.DependencyInjection](https://www.nuget.org/packages/CommandLineInjector.Microsoft.DependencyInjection/)
 
 ```csharp
 namespace CommandLineInjector.Microsoft.DependencyInjection.Example
@@ -427,7 +429,7 @@ namespace CommandLineInjector.Microsoft.DependencyInjection.Example
 
 ## CommandLineInjector.Autofac
 
-Adapter for the popular [Autofac](https://autofac.org/) IoC Container
+Adapter for the popular [Autofac](https://autofac.org/) IoC Container.  Availble on nuget [CommandLineInjector.Autofac](https://www.nuget.org/packages/CommandLineInjector.Autofac/)
 
 ```csharp
 namespace CommandLineInjector.Autofac.Example
@@ -462,7 +464,7 @@ namespace CommandLineInjector.Autofac.Example
 
 ## CommandLineInjector.StructureMap
 
-Adapter for [StructureMap](http://structuremap.github.io/)
+Adapter for [StructureMap](http://structuremap.github.io/). Availble on nuget [CommandLineInjector.StructureMap](https://www.nuget.org/packages/CommandLineInjector.StructureMap/)
 
 ```csharp
 namespace CommandLineInjector.StructureMap.Example
@@ -499,7 +501,7 @@ namespace CommandLineInjector.StructureMap.Example
 
 ## CommandLineInjector.Lamar
 
-[Lamar](https://jasperfx.github.io/lamar/) is the long-term replacement for StructureMap, the adapter for Lamar looks very similar to the StructureMap adapter.
+[Lamar](https://jasperfx.github.io/lamar/) is the long-term replacement for StructureMap, the adapter for Lamar looks very similar to the StructureMap adapter. Availble on nuget [CommandLineInjector.Lamar](https://www.nuget.org/packages/CommandLineInjector.Lamar/)
 
 ```csharp
 namespace CommandLineInjector.Lamar.Example
