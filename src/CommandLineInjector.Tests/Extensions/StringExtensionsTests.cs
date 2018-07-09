@@ -48,5 +48,19 @@ namespace CommandLineInjector.Tests.Extensions
         }
 
 
+        [InlineData("alreadyCamelled", "alreadyCamelled")]
+        [InlineData("PascalCaseString", "pascalCaseString")]
+        [InlineData("I", "i")]
+        [InlineData("i", "i")]
+        [InlineData("", "")]
+        [Theory]
+        public void Should_Lowercase_First_Char(string source, string expectedResult)
+        {
+            // Act
+            var result = source.LowercaseFirstChar();
+
+            // Assert
+            result.ShouldBe(expectedResult);
+        }
     }
 }

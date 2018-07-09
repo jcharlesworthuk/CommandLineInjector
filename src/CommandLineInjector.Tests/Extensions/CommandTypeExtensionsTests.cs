@@ -44,7 +44,20 @@ namespace CommandLineInjector.Tests.Extensions
         public void Should_Find_Invoke_Method(Type commandType)
         {
             // Act
-            var result = commandType.FindInvokeMethod();
+            var result = commandType.FindMethodOrDefault();
+
+            // Assert
+            result.ShouldNotBeNull();
+            result.Name.ShouldBe(nameof(TestCommand.Invoke));
+        }
+
+        [InlineData(typeof(TestCommand))]
+        [InlineData(typeof(TestCommandWithParameterlessInvoke))]
+        [Theory]
+        public void Should_Fall_Back_To_Invoke_Method(Type commandType)
+        {
+            // Act
+            var result = commandType.FindMethodOrDefault("something");
 
             // Assert
             result.ShouldNotBeNull();
@@ -61,7 +74,7 @@ namespace CommandLineInjector.Tests.Extensions
         public void Should_Throw_If_Cant_Find_Invoke_Method(Type commandType)
         {
             // Act / Assert
-            Should.Throw<InvalidCommandTypeException>(() => commandType.FindInvokeMethod());
+            Should.Throw<InvalidCommandTypeException>(() => commandType.FindMethodOrDefault());
         }
     }
 }

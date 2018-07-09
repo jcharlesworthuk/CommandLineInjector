@@ -10,10 +10,18 @@ using Microsoft.Extensions.CommandLineUtils;
 
 namespace CommandLineInjector.Application
 {
+    /// <summary>
+    /// Inherits from <see cref="CommandLineApplication"/> and adds support for Dependency Injection and automatic method parameter binding
+    /// </summary>
     public class CommandLineInjectingApplication : CommandLineApplication
     {
         private readonly ICommandContainer _container;
 
+        /// <summary>
+        /// Creates a new instance of this inhjecting command line application
+        /// </summary>
+        /// <param name="name">Application name</param>
+        /// <param name="container">DI container adapter for your chosen DI framework</param>
         public CommandLineInjectingApplication(string name, ICommandContainer container)
         {
             _container = container;
@@ -21,6 +29,9 @@ namespace CommandLineInjector.Application
             HelpOption("-?|-h|--help");
         }
 
+        /// <summary>
+        /// Adds a default OnExecute implementation instructing the caller to specify a command name
+        /// </summary>
         public CommandLineInjectingApplication RequiresCommand()
         {
             OnExecute(() =>
@@ -35,6 +46,11 @@ namespace CommandLineInjector.Application
 
         private readonly List<ContainerConfigurationOption> _universalCommandOptions = new List<ContainerConfigurationOption>();
 
+        /// <summary>
+        /// Adds this global option to all subsequent commands added with <see cref="Command{T}(string)"/> or <see cref="CommandService{T}(string[])"/>
+        /// </summary>
+        /// <param name="option"></param>
+        /// <returns></returns>
         public CommandLineInjectingApplication AddToSubsequentAllCommands(ContainerConfigurationOption option)
         {
             _universalCommandOptions.Add(option);
@@ -42,11 +58,17 @@ namespace CommandLineInjector.Application
             return this;
         }
 
+        /// <summary>
+        /// Add this class as a command to the application
+        /// </summary>
+        /// <typeparam name="TCommandType">Type to be resolved when this command is executed</typeparam>
+        /// <param name="name">Command/method name</param>
+        /// <remarks>Make sure your command type is registered with your DI container</remarks>
         public CommandLineInjectingApplication Command<TCommandType>(string name)
         {
             Command(name, config =>
             {
-                var invokeMethod = typeof(TCommandType).FindInvokeMethod();
+                var invokeMethod = typeof(TCommandType).FindMethodOrDefault(name);
                 var indexedParameters = invokeMethod.GetParameters().IndexShortenedNames(new HashSet<string>(_universalCommandOptions.Select(x => x.ShortcutName)));
                 var options = new Dictionary<ParameterInfo, CommandOption>();
                 var arguments = new Dictionary<ParameterInfo, CommandArgument>();
@@ -119,5 +141,24 @@ namespace CommandLineInjector.Application
 
             return this;
         }
+
+
+        /// <summary>
+        /// Add the specified methods from this class as commands in the application
+        /// </summary>
+        /// <typeparam name="TCommandType">Type to be resolved when any of these commands are executed</typeparam>
+        /// <param name="names">Method names on the command type</param>s
+        /// <remarks>Make sure your command type is registered with your DI container</remarks>
+        /// <example>CommandService&lt;MyServiceType&gt;(nameof(MyServiceType.CommandMethod))</example>
+        public CommandLineInjectingApplication CommandService<TCommandType>(params string[] names)
+        {
+            foreach (var name in names.Select(x => x.LowercaseFirstChar()))
+            {
+                Command<TCommandType>(name);
+            }
+
+            return this;
+        }
+
     }
 }

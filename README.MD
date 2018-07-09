@@ -261,7 +261,7 @@ namespace EmailSenderConsoleApp
             var app = new CommandLineInjectingApplication("emailsender", new MicrosoftDependencyInjectionAdapter(serviceCollection, null));
 
             // Add our sendand retry command methods on the EmailCommands class
-            app.Commands<EmailCommands>(nameof(EmailCommands.Send), nameof(EmailCommands.Retry));
+            app.CommandService<EmailCommands>(nameof(EmailCommands.Send), nameof(EmailCommands.Retry));
 
             // Execute the application with the command line argument array
             app.Execute(args);
@@ -509,43 +509,3 @@ namespace CommandLineInjector.Lamar.Example
 }
 ```
 
-
-## Why And How?
-
-If you've used ASP.Net you'll know how simple parameter binding is in controllers, and since controllers can be wired up with dependency injection that makes writing code like this a breeze
-
-```csharp
-public class MyController : Controller
-{
-    private readonly SimpleCommandClass _command;
-
-    public MyController(SimpleCommandClass command)
-    {
-        _command = command;
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> ExecuteCommand(string someValue)
-    {
-        await _command.Invoke(someValue);
-        return Accepted();
-    }
-}
-```
-
-Isolating your functionality like this is a great way to abstract functionality into more reusable chunks, and there are many DI frameworks out there to help with the dependency injection side of things (including Microsoft's own).  
-
-
-
-```
-var argument = app.Argument("arg name", "arg description");
-
-app.OnExecute(() =>
-{
-    if (!string.IsNullOrWhiteSpace(argument.Value))
-    {
-        Console.WriteLine($"Argument value: {argument.Value}");
-    }
-    return 0;
-});
-```
