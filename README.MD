@@ -160,6 +160,24 @@ Passing the help option `--help` (or `-?`) will print the contents of the descri
     -?|-h|--help              Show help information
 ```
 
+### Try It!
+
+There are examples in the /examples folder of this repository using popular DI frameworks.  You can build and run them using the batch files, for example
+
+```
+> example-autofac --help
+
+Usage: example-autofac [options] [command]
+
+Options:
+  -?|-h|--help  Show help information
+
+Commands:
+  simple  A simple example command with injected dependencies
+
+Use "example-autofac [command] --help" for more information about a command.
+```
+
 ## Multiple Commands
 
 The true power of all of this comes when you add multiple command registrations to build up a complex and multi-functional command line application.  Let's add a second command to Retry and email.
