@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CommandInjector.Microsoft.DependencyInjection\CommandInjector.Microsoft.DependencyInjection.csproj" />
+    <ProjectReference Include="..\CommandInjector.Microsoft.DependencyInjection\CommandLineInjector.Microsoft.DependencyInjection.csproj" />
   </ItemGroup>
 
 </Project>

@@ -21,17 +21,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Lamar.T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Lamar.Example", "examples\CommandLineInjector.Lamar.Example\CommandLineInjector.Lamar.Example.csproj", "{A9517ACE-2092-4E77-A36B-DF6B0191B4E0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Autofac", "src\CommandLineInjector.Autofac\CommandLineInjector.Autofac.csproj", "{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Autofac", "src\CommandLineInjector.Autofac\CommandLineInjector.Autofac.csproj", "{3A0245E4-12FA-4E39-8EF8-51BE7DBC4C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Autofac.Tests", "src\CommandLineInjector.Autofac.Tests\CommandLineInjector.Autofac.Tests.csproj", "{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Autofac.Tests", "src\CommandLineInjector.Autofac.Tests\CommandLineInjector.Autofac.Tests.csproj", "{6A6EC39B-3AD4-4488-AA92-909CA05FEBE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandLineInjector.Autofac.Example", "examples\CommandLineInjector.Autofac.Example\CommandLineInjector.Autofac.Example.csproj", "{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Autofac.Example", "examples\CommandLineInjector.Autofac.Example\CommandLineInjector.Autofac.Example.csproj", "{D67B6F5D-3B0A-4ADD-BEB3-2194C047AA98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandInjector.Microsoft.DependencyInjection", "src\CommandInjector.Microsoft.DependencyInjection\CommandInjector.Microsoft.DependencyInjection.csproj", "{6888AB47-06DF-4D67-8511-C47F5B760EC7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Microsoft.DependencyInjection", "src\CommandLineInjector.Microsoft.DependencyInjection\CommandLineInjector.Microsoft.DependencyInjection.csproj", "{6888AB47-06DF-4D67-8511-C47F5B760EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandInjector.Microsoft.DependencyInjection.Tests", "src\CommandInjector.Microsoft.DependencyInjection.Tests\CommandInjector.Microsoft.DependencyInjection.Tests.csproj", "{FE9919A6-4D92-427E-8394-EE33A58EB57B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Microsoft.DependencyInjection.Tests", "src\CommandLineInjector.Microsoft.DependencyInjection.Tests\CommandLineInjector.Microsoft.DependencyInjection.Tests.csproj", "{FE9919A6-4D92-427E-8394-EE33A58EB57B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandInjector.Microsoft.DependencyInjection.Example", "examples\CommandInjector.Microsoft.DependencyInjection.Example\CommandInjector.Microsoft.DependencyInjection.Example.csproj", "{721E7018-BF42-4287-98E4-ACA8165452C2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommandLineInjector.Microsoft.DependencyInjection.Example", "examples\CommandLineInjector.Microsoft.DependencyInjection.Example\CommandLineInjector.Microsoft.DependencyInjection.Example.csproj", "{721E7018-BF42-4287-98E4-ACA8165452C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CommandInjector.Microsoft.DependencyInjection\CommandInjector.Microsoft.DependencyInjection.csproj" />
+    <ProjectReference Include="..\..\src\CommandInjector.Microsoft.DependencyInjection\CommandLineInjector.Microsoft.DependencyInjection.csproj" />
     <ProjectReference Include="..\CommandLineInjector.ExampleBase\CommandLineInjector.ExampleBase.csproj" />
   </ItemGroup>
 
